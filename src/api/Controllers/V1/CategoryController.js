@@ -40,7 +40,7 @@ const getCategoryBySlugOrId = catchAsync(async function (request, response) {
   const validation = await schemaGetCategoryBySlugOrIdRequest.validateAsync(
     request.query
   );
-  const service = await getCategoryBySlugOrIdService(validation);
+  const service = await getCategoryBySlugOrIdService(validation.value);
   return response.status(service.code).json(service.send);
 });
 
