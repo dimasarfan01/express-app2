@@ -1,7 +1,4 @@
-const { Category } = require('../../Models');
-const { catchAsync, slugify } = require('../../../utils');
-const ApiError = require('../../../utils/ApiError');
-const sequelize = require('sequelize');
+const { catchAsync } = require('../../../utils');
 const {
   createCategoryService,
   getAllCategoriesService,
@@ -13,7 +10,6 @@ const {
   schemaCreateCategoryRequest,
   schemaGetAllCategoryRequest,
   schemaUpdateCategoryById,
-  schemaDeleteCategoryById,
   schemaGetCategoryBySlugOrIdRequest,
 } = require('../../Requests/V1/CategoryRequest');
 
